@@ -1,0 +1,57 @@
+<style>
+  table, td, th {border: 1px solid black; border-collapse: collapse;}
+</style>
+
+<div class="banner-info" align="center">
+
+    <span><label>Name Of The Ward</label></span>
+    <span><input id="WARD" type="text" class="text-center" required="" placeholder=""></span><br>
+
+    <span><label>Name Of The Parent</label></span>
+    <span><input id="PARENT" type="text" class="text-center" required="" placeholder=""></span><br>
+
+    <span><label>Date Of Birth</label></span>
+    <span><input id="DOB" type="text" class="text-center" required=""></span><br>
+
+    <span><label>Age</label></span>
+    <span><input id="AGE" type="text" class="text-center" required=""></span><br>
+
+    <span><label>Contact Number</label></span>
+    <span><input id="CONTACT" type="text" class="text-center" required=""></span><br>
+
+    <span><label>Address</label></span>
+    <span><input id="ADDRESS" type="text" class="text-center" required=""></span><br>   
+</div>
+
+<div class="logo">
+    <input type="button" onClick="insertData()" value="Add entry">
+</div>
+<script language="javascript">
+    function insertData() {
+      var CHILD_NAME = document.getElementById("WARD NAME").value;
+        var PARENT_NAME = document.getElementById("PARENT NAME").value;
+        var DOB = document.getElementById("DOB").value;
+        var AGE = document.getElementById("AGE").value;
+        var CONTACT = document.getElementById("PH NUMBER").value;
+        var ADDRESS = document.getElementById("ADDRESS").value;
+               document.getElementById("insertionPoint").innerHTML += "<tr><td>" + CHILD_NAME + "</td><td>" + PARENT_NAME + "</td><td>" + DOB + "</td><td>" + AGE + "</td><td>" + CONTACT + "</td><td>" + ADDRESS + "</td></tr>";      
+        
+        document.getElementById("WARD NAME").value = "";
+        document.getElementById("PARENT NAME").value = "";
+        document.getElementById("DOB").value = "";
+        document.getElementById("AGE").value = "";
+        document.getElementById("CONTACT").value = "";
+       document.getElementById("ADDRESS").value = "";    
+    }
+</script>
+<table id="t1">
+    <caption>DAYCARE ADDMISSION FORM</caption>
+    <colgroup>
+        <col span="2" class="c2">
+        <col>
+        <col class="c1">
+    </colgroup>
+    <tbody id="insertionPoint">
+      
+    </tbody>
+</table>
